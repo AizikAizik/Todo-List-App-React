@@ -25,7 +25,7 @@ class AddForm extends Component{
      handleSubmit = (event) =>{
         event.preventDefault();
         this.props.appendToDo(this.state);
-        this.setState({ content : "" })
+        this.setState({ content : "" }) // reset the content of the state object 
     }
 
 }
