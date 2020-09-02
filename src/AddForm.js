@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 
 class AddForm extends Component{
-
     state = {
         content : ""
-     }
+    }
 
     render(){
         return (
@@ -17,15 +16,14 @@ class AddForm extends Component{
         );
     }
 
-     handleChange = (event) =>{
+    handleChange = (event) =>{
         this.setState({ content : event.target.value })
     }
 
-
-     handleSubmit = (event) =>{
+    handleSubmit = (event) =>{
         event.preventDefault();
         this.props.appendToDo(this.state);
-        this.setState({ content : "" }) // reset the content of the state object 
+        this.setState({ content : "" }) // reset the content of the state object
     }
 
 }

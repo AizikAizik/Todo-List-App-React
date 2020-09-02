@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import Todos from './Todos'
 import AddForm from './AddForm'
 
-
 class App extends Component {
 
     state = {
         todos : [
             { id: 1, content: "Buy some Milk" },
             { id: 2, content: "Play Music" }
-         ]
+        ]
     }
 
     render(){
@@ -29,11 +28,10 @@ class App extends Component {
     }
 
     appendToDo = ( todo ) =>{
-        todo.id = Math.random();
-
+        todo.id = Math.random(); //generate new random id to get unique value
+        //use spread operator to append old todo's array values with the new todo array
         let todos = [...this.state.todos, todo];
-
-        this.setState({ todos })
+        this.setState({ todos }) // set new todos state
     }
 
 }
